@@ -1,34 +1,12 @@
 {
-  "name": "multiplayer-dot-chase",
+  "name": "multiplayer-dot-chase-server",
   "version": "1.0.0",
-  "description": "A multiplayer tag game with power-ups and game modes",
-  "main": "main.js",
-  "author": "Your Name <your.email@example.com>",
+  "main": "server.js",
   "scripts": {
-    "start": "electron .",
-    "build": "electron-builder"
+    "start": "node server.js"
   },
-  "build": {
-    "appId": "com.yourname.multiplayerdotchase",
-    "productName": "Multiplayer Dot Chase",
-    "files": [
-      "index.html",
-      "main.js",
-      "public/**/*"
-    ],
-    "win": {
-      "target": "nsis",
-      "icon": "public/icon.ico"
-    },
-    "mac": {
-      "target": "dmg"
-    },
-    "linux": {
-      "target": "AppImage"
-    }
-  },
-  "devDependencies": {
-    "electron": "^28.2.3",
-    "electron-builder": "^24.9.1"
+  "dependencies": {
+    "express": "^4.17.1",
+    "ws": "^8.5.0"
   }
 }
